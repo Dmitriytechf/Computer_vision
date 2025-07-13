@@ -9,11 +9,16 @@ face_detector = mp_face.FaceDetection(min_detection_confidence=0.5, model_select
 
 pTime = 0
 
+
+wCam, hCam = 1280, 720
+
 cap = cv2.VideoCapture(0) # Вебка
+cap.set(3, wCam)
+cap.set(4, hCam)
 
 # Задаем размер окна
 cv2.namedWindow("Result", cv2.WINDOW_NORMAL)
-cv2.resizeWindow("Result", 1280, 720)
+cv2.resizeWindow("Result", wCam, hCam)
 while True:
     success, img = cap.read()
     if not success:

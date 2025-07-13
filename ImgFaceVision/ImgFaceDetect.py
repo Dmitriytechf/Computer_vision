@@ -4,11 +4,11 @@ import cv2
 # Загружаем детектор
 detector = MTCNN()
 
-fixed_width = 1280
+fixed_width = 1360
 fixed_height = 800
 
-# img = cv2.imread('images/funyhobbit.jpg')
-img = cv2.imread('images/bilbo.jpg') # Вот эта картинка тяжелая
+img = cv2.imread('images/funyhobbit.jpg')
+# img = cv2.imread('images/bilbo.jpg') # Вот эта картинка тяжелая
 # img = cv2.imread('images/fellowship.jpg')
 
 image_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # Надо в rgb для mtcnn

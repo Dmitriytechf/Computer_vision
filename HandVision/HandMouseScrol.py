@@ -20,8 +20,8 @@ pTime = 0
 
 cap = cv2.VideoCapture(0)
 
-cv2.namedWindow("Result", cv2.WINDOW_NORMAL)
-cv2.resizeWindow("Result", 1280, 720)
+# cv2.namedWindow("Result", cv2.WINDOW_NORMAL)
+# cv2.resizeWindow("Result", 1280, 720)
 while True:
     success, img = cap.read()
 

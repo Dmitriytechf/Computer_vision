@@ -6,7 +6,14 @@ mp_hands = mp.solutions.hands # модуль MediaPipe, отвечающий з�
 hands = mp_hands.Hands() # Экземпляр детектора рук с дефолтными параметрами
 mp_draw = mp.solutions.drawing_utils  # Для визуализации точек
 
+wCam, hCam = 1280, 720
+
 cap = cv2.VideoCapture(0) # Выводим камеру
+cap.set(3, wCam)
+cap.set(4, hCam)
+
+cv2.namedWindow("Result Hand", cv2.WINDOW_NORMAL)
+cv2.resizeWindow("Result Hand", wCam, hCam)
 
 while True:
     success, img = cap.read()
