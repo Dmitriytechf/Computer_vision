@@ -2,6 +2,9 @@ import cv2
 
 
 img = cv2.imread('images/obi_eni.jpg')
+if img is None:
+    print("Не удалось загрузить изображение. Проверь путь!")
+    exit()
 # img = cv2.imread('images/luke.jpg')
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -20,7 +23,7 @@ face_detect = face_cascade.detectMultiScale(
 )
 
 for (x, y, w, h) in face_detect:
-    cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 3)
+    cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 3)
 
 resized_img = cv2.resize(img, (fixed_width, fixed_height))
 cv2.imshow('Haar Detect', resized_img)

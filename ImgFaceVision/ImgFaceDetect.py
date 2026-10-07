@@ -8,6 +8,9 @@ fixed_width = 1360
 fixed_height = 800
 
 img = cv2.imread('images/funyhobbit.jpg')
+if img is None:
+    print("Не удалось загрузить изображение. Проверь путь!")
+    exit()
 # img = cv2.imread('images/bilbo.jpg') # Вот эта картинка тяжелая
 # img = cv2.imread('images/fellowship.jpg')
 
